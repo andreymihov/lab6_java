@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="300.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.view.Controller">
+    <children>
+        <SplitPane layoutX="153.0" layoutY="70.0" prefHeight="300.0" prefWidth="602.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="508.0">
+                    <children>
+                        <TableView fx:id="datumModelTableView" prefHeight="298.0" prefWidth="463.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="138.0" AnchorPane.topAnchor="0.0">
+                            <columns>
+                                <TableColumn fx:id="datumIDCol" prefWidth="40.0" text="ID" />
+                                <TableColumn fx:id="datumSymbolCol" prefWidth="128.79998779296875" text="Symbol" />
+                                <TableColumn fx:id="datumNameCol" prefWidth="191.20001220703125" text="Name" />
+                                <TableColumn fx:id="datumNameIdCol" prefWidth="130" text="Name ID" />
+                                <TableColumn fx:id="datumRankCol" prefWidth="75.0" text="Attack type" />
+                                <TableColumn fx:id="datumPriceUSDCol" prefWidth="75.0" text="Roles" />
+                                <TableColumn fx:id="datumPerCh24hCol" prefWidth="75.0" text="Image" />
+                                <TableColumn fx:id="datumPerCh1hCol" prefWidth="75.0" text="Icon" />
+                                <TableColumn fx:id="datumPerCh7dCol" prefWidth="75.0" text="Base Health" />
+                                <TableColumn fx:id="datumPriceBTCCol" prefWidth="120.0" text="Base health Regen" />
+                                <TableColumn fx:id="datumMarketCapUSDCol" prefWidth="75.0" text="Base mana" />
+                                <TableColumn fx:id="datumVolume24Col" prefWidth="120.0" text="Base mana regen" />
+                                <TableColumn fx:id="datumVolume24aCol" prefWidth="75.0" text="Base armor" />
+                                <TableColumn fx:id="datumCsupplyCol" prefWidth="75.0" text="Base mr" />
+                                <TableColumn fx:id="datumTsupplyCol" prefWidth="120" text="Base min attack" />
+                                <TableColumn fx:id="datumMsupplyCol" prefWidth="120" text="Base max attack" />
+                            </columns>
+                            <columnResizePolicy>
+                                <TableView fx:constant="UNCONSTRAINED_RESIZE_POLICY" />
+                            </columnResizePolicy>
+                        </TableView>
+                  <MenuButton layoutX="479.0" layoutY="63.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="91.0" text="Sort">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#sortByRankDesc" text="By Rank Desc" />
+                      <MenuItem mnemonicParsing="false" onAction="#sortByRankAsc" text="By Rank Asc" />
+                        <MenuItem mnemonicParsing="false" onAction="#sortByPriceUSDDesc" text="By Priсe USD Desc" />
+                        <MenuItem mnemonicParsing="false" onAction="#sortByPriceUSDAsc" text="By Price USD Asc" />
+                        <MenuItem mnemonicParsing="false" onAction="#sortByPriceBTCDesc" text=" By Price BTC Desc" />
+                        <MenuItem mnemonicParsing="false" onAction="#sortByPriceBTCAsc" text="By Price BTC Asc" />
+                    </items>
+                  </MenuButton>
+                  <TextField fx:id="textField" layoutX="479.0" layoutY="149.0" onMouseClicked="#filter" prefHeight="26.0" prefWidth="99.0" />
+                  <Label layoutX="488.0" layoutY="120.0" prefHeight="18.0" prefWidth="91.0" text="Filter By Name" />
+                    </children>
+                </AnchorPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>
